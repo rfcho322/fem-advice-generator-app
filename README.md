@@ -40,7 +40,7 @@ Users should be able to:
 
 ### Links
 
-- Frontend Mentor solution URL: [Advice Generator App]()
+- Frontend Mentor solution URL: [Advice Generator App Solution]()
 - Live Site URL: [Advice Generator App Live Website]()
 
 ## My process
