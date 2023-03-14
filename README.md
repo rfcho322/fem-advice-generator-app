@@ -49,6 +49,8 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS Flexbox
+- JavaScript
+- EJS (Embedded JavaScript templating)
 - Mobile-first workflow
 
 ### Useful resources
