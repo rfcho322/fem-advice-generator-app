@@ -14,7 +14,7 @@
 # Avoid your project being littered with annoying .DS_Store files!
 .DS_Store
 .prettierignore
-.style-guide.md
+style-guide.md
 design/
 /node_modules
 npm-debug.log
