@@ -41,7 +41,7 @@ Users should be able to:
 ### Links
 
 - Frontend Mentor solution URL: [Advice Generator App Solution](https://www.frontendmentor.io/solutions/advice-generator-app-using-advice-slip-json-api-BGW7Gm__GV)
-- Live Site URL: [Advice Generator App Live Website](https://advice-generator-app-rfcho322.onrender.com/)
+- Live Site URL: [Advice Generator App Live Website](https://advice-generator-app-rfcho322.vercel.app/)
 
 ## My process
 
@@ -49,7 +49,8 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS Flexbox
-- NodeJS Express
+- Node.js
+- Express.js
 - EJS (Embedded JavaScript templating)
 - Mobile-first workflow
 
