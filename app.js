@@ -1,8 +1,12 @@
 const express = require("express");
+const path = require("path");
 const https = require("https");
 const ejs = require("ejs");
 
 const app = express();
+
+// Set the views directory
+app.set('views', path.join(__dirname, 'views'));
 
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
