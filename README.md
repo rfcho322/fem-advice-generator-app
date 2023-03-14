@@ -49,7 +49,7 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS Flexbox
-- JavaScript
+- NodeJS
 - EJS (Embedded JavaScript templating)
 - Mobile-first workflow
 
