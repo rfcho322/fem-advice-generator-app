@@ -7,6 +7,9 @@ const loading = document.querySelector(".loading");
 
 //INITIAL DATA TO BE DISPLAYED
 document.addEventListener('DOMContentLoaded', () => {
+    // DISABLE BUTTON
+    randomBtn.disabled = true;
+    
     fetch("/advice")
     .then( response => response.json()) // PARSE AS JSON AND RETURNS AS OBJECT
     .then(data => {
