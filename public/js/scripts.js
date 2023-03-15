@@ -9,12 +9,12 @@ const loading = document.querySelector(".loading");
 document.addEventListener('DOMContentLoaded', () => {
     // DISABLE BUTTON
     randomBtn.disabled = true;
-    
+
     fetch("/advice")
     .then( response => response.json()) // PARSE AS JSON AND RETURNS AS OBJECT
     .then(data => {
         adviceID.innerHTML = data.adviceId;
-        adviceMessage.innerHTML = data.adviceMessage;
+        adviceMessage.innerHTML = `"${data.adviceMessage}"`;
     })
     .catch(error => console.log(error))
     .finally(() => {
@@ -46,7 +46,7 @@ form.addEventListener("submit", (event) => {
     })
     .then(data => {
         adviceID.innerHTML = data.adviceId;
-        adviceMessage.innerHTML = data.adviceMessage;
+        adviceMessage.innerHTML = `"${data.adviceMessage}"`;
     })
     .catch(error => {
         console.log("Error", error);
