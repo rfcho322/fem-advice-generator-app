@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const https = require("https");
 const ejs = require("ejs");
+const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -11,11 +12,17 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.get("/", function(req, res) {
+    res.render("index");
+});
+
+app.get("/advice", function(req, res) {
     randomAdvice(res);
 });
 
-app.post("/", function(req, res) {
+app.post("/submit", function(req, res) {
     randomAdvice(res);
 });
 
@@ -26,9 +33,8 @@ function randomAdvice (res) {
             const adviceData = JSON.parse(data);
             const adviceId = adviceData.slip.id;
             const adviceMessage = adviceData.slip.advice;
-            console.log(adviceId);
-            console.log(adviceMessage);
-            res.render("index", {adviceId: adviceId, adviceMessage : adviceMessage});
+            const advice = `ID: ${adviceId}, Message: ${adviceMessage}`;
+            res.json({adviceId: adviceId, adviceMessage : adviceMessage});
         })
     });
 }

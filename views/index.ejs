@@ -17,15 +17,18 @@
     <div class="wrapper">
       <div class="card">
         <div class="card-title">
-            <h1 class="title">Advice #<%= adviceId %></h1>
+            <h1 class="title">Advice #<span id="adviceId"></span></h1>
         </div>
         <div class="card-body">
-          <p class="quote">"<%= adviceMessage %>"</p>
+          <div class="loading">
+            <img src="/images/loading.gif" alt="loading spinner">
+          </div>
+          <p class="quote"><span id="adviceMessage"></span></p>
         </div>
         <div class="divider">
           <img src="/images/pattern-divider-mobile.svg" alt="divider">
         </div>
-        <form action="/" method="POST">
+        <form>
             <button type="submit" class="randomBtn" aria-label="Generate random advice">
             <img src="/images/icon-dice.svg" alt="dice">
             </button>
@@ -40,5 +43,6 @@
         Coded by <a href="https://github.com/rfcho322/fem-advice-generator-app">rfcho322</a>
     </div>
   </footer>
+  <script src="/js/scripts.js"></script>
 </body>
 </html>

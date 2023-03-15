@@ -52,11 +52,14 @@ Users should be able to:
 - Node.js
 - Express.js
 - EJS (Embedded JavaScript templating)
+- Fetch API
 - Mobile-first workflow
 
 ### Useful resources
 
 - [Advice Slip JSON API](https://api.adviceslip.com/) - is a free and open API that provides a collection of advice messages in JSON format. It allows developers to easily fetch random advice messages to integrate into their applications or websites
+
+- [FETCH API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) - is a modern browser technology that allows web developers to make HTTP requests to server resources and retrieve data from them. It provides a simple and flexible interface to fetch data from servers using a Promise-based approach, which allows developers to handle responses in an asynchronous way
 
 ## Author
 
