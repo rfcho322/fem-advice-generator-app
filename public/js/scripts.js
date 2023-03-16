@@ -9,12 +9,14 @@ const loading = document.querySelector(".loading");
 document.addEventListener('DOMContentLoaded', () => {
     // DISABLE BUTTON
     randomBtn.disabled = true;
+    document.querySelector(".quote").classList.remove("animate__animated" ,"animate__pulse");
 
     fetch("/advice")
     .then( response => response.json()) // PARSE AS JSON AND RETURNS AS OBJECT
     .then(data => {
         adviceID.innerHTML = data.adviceId;
         adviceMessage.innerHTML = `"${data.adviceMessage}"`;
+        document.querySelector(".quote").classList.add("animate__animated" ,"animate__pulse");
     })
     .catch(error => console.log(error))
     .finally(() => {
@@ -33,6 +35,7 @@ form.addEventListener("submit", (event) => {
     adviceID.innerHTML = '';
     adviceMessage.innerHTML = '';
     randomBtn.disabled = true;
+    document.querySelector(".quote").classList.remove("animate__animated" ,"animate__pulse");
     
     fetch("/submit", {
         method: "POST",
@@ -47,6 +50,7 @@ form.addEventListener("submit", (event) => {
     .then(data => {
         adviceID.innerHTML = data.adviceId;
         adviceMessage.innerHTML = `"${data.adviceMessage}"`;
+        document.querySelector(".quote").classList.add("animate__animated" ,"animate__pulse");
     })
     .catch(error => {
         console.log("Error", error);
